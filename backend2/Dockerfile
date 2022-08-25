@@ -1,13 +1,13 @@
-FROM node:14-alpine
+FROM node:12-alpine
 
 RUN apk add git
 
-RUN git clone --branch dev https://github.com/InBordersHackathon/facebookButCooler.git
+RUN git clone --branch main https://github.com/InBordersHackathon/testRepository2
 
-WORKDIR facebookButCooler/example-backend
+WORKDIR testRepository2/backend2
 
 RUN npm i
 
-EXPOSE 3001
+EXPOSE 3002
 
-ENTRYPOINT ["npm", "run", "start"]
+ENTRYPOINT ["npm","run","start"]
